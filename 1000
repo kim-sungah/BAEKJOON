@@ -11,13 +11,13 @@ public class codeExample {
     System.out.println(a + b);
 
     if(a < 0) {
-        System.out.println("다시 입력하세요.");
+        System.out.println("a가 0 보다 작습니다.");
     }
     else if(b > 10) {
-        System.out.println("다시 입력하세요.");
+        System.out.println("b가 10 보다 큽니다.");
     }
     else(a <0 && b > 10) {
-        System.out.println("다시 입력하세요.");
+        System.out.println("a가 0 보다 작고, b가 10 보다 큽니다.");
     }
   }
 }
