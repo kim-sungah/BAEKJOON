@@ -1,0 +1,13 @@
+package ksa01.exam01;
+
+/*
+작성자: 김성아
+작성일: 2023.06.18
+ */
+public class Hello {
+    //프로그램 실행 진입점
+    public static void main(String[] args) {
+        //Hello, Java 출력
+        System.out.println("Hello, World");
+    } // end of main
+} // end of class
