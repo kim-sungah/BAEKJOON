@@ -1,0 +1,15 @@
+package ksa02.exam10;
+import java.util.*;
+public class codeExample {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+
+        System.out.println(A*5);
+        System.out.println(A*8);
+        System.out.println(A*3);
+        System.out.println(A*B);
+    }
+}
