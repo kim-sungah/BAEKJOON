@@ -1,0 +1,11 @@
+package ksa02.exam10;
+public class codeExample {
+    public static void main(String[] args) {
+
+       System.out.println("| \\_/ |");
+       System.out.println("| q p |   /}");
+       System.out.println("(  ⊙  )\"\"\"\\");
+       System.out.println("| \"^\"'     |");
+       System.out.println("||_/=\\ \\__ |");
+    }
+}
