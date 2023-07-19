@@ -1,0 +1,10 @@
+package ksa02.exam10;
+import java.util.Scanner;
+public class codeExample {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String id = scanner.nextLine();
+        System.out.println(id + "??!");
+    }
+}
