@@ -16,8 +16,5 @@ public class codeExample {
     else if(b > 10) {
         System.out.println("b가 10 보다 큽니다.");
     }
-    else(a <0 && b > 10) {
-        System.out.println("a가 0 보다 작고, b가 10 보다 큽니다.");
-    }
   }
 }
