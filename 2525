@@ -1,0 +1,25 @@
+package ksa02.exam10;
+import java.util.*;
+public class codeExample {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int Hour, Min, cookingTime; // 시간 분 요리시간 선언
+
+        Hour = scanner.nextInt(); // 시간 입력
+        Min = scanner.nextInt(); // 분 입력
+        cookingTime = scanner.nextInt(); // 요리시간 입력
+
+        Hour += cookingTime / 60;
+        Min += cookingTime % 60;
+
+        if (Min >= 60) {
+            Hour++;
+            Min -= 60;
+        }
+        if(Hour >= 24) {
+            Hour -= 24;
+        }
+        System.out.println(Hour + " " + Min);
+    }
+}
