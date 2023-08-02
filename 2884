@@ -1,0 +1,26 @@
+package ksa02.exam10;
+import java.util.*;
+public class codeExample {
+    public static void main(String[] args) {
+
+        Scanner scanner= new Scanner(System.in);
+        int Hour, Min; // 시간 분 선언
+        int alarm = 45; // 알람 선언
+
+        Hour = scanner.nextInt(); // 시간 입력
+        Min = scanner.nextInt(); // 분 입력
+
+        if(Min<alarm) {
+            Hour--;
+            Min= 60 - (alarm - Min);
+
+            if(Hour<0) {
+                Hour = 23;
+            }
+            System.out.println(Hour + " " + Min);
+        }
+        else {
+            System.out.println(Hour + " " + (Min - alarm));
+        }
+    }
+}
