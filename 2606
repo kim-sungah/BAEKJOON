@@ -1,0 +1,39 @@
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**6) # 기본 : 10**3
+from collections import deque
+
+cn = int(input()) # cn : computer number
+net = int(input()) # net : network
+graph = [[] for _ in range(cn+1)] # 2차원 배열 리스트
+
+for _ in range(net): # network 갯수만큼 연결된 vertex 입력
+    v1, v2 = map(int, input().split())
+    graph[v1] += [v2]
+    graph[v2] += [v1] # 양방향 그래프
+
+visited = [0]*(cn+1) # 방문 여부 확인용
+
+# DFS
+def dfs(v):
+    visited[v] = 1 # 시작 노드 : 1 (방문 표시)
+    for w in graph[v]:
+        if visited[w] == 0: # 아직 방문 안한 경우,
+            dfs(w) # dfs 함수 재귀 호출
+
+# dfs(1)
+
+# BFS
+def bfs(s):
+    visited[s] = 1 # 시작 정점 : 1 (방문 표시)
+    queue = deque([s]) # 초기화, 시작 정점 추가
+    while queue:
+        v = queue.popleft() # 첫번째 요소 pop, 현재 정점 v
+        for w in graph[v]:
+            if visited[w] == 0: # 아직 방문 안한 경우,
+                visited[w] = 1
+                queue.append(w) # 큐에 방문한 정점 추
+
+bfs(1)
+
+print(sum(visited)-1) # 시작 정점과 연결된 정점 수
